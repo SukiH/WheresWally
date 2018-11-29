@@ -7,11 +7,15 @@ Creation Date: 2018-11-29
 
 #pragma once
 #include "Matrix.h"
+#include "string"
+#include <fstream>
+#include <sstream>
+#include <iostream>
 
+using namespace std;
 class Base_Image : public Matrix
 {
 private:
-	Matrix data();
 public:
 	Base_Image();
 	~Base_Image();
