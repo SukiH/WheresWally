@@ -151,16 +151,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="Base_Image.cpp" />
+    <ClCompile Include="Large_Image.cpp" />
+    <ClCompile Include="Matrix.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ReadWriteFunctions.cpp" />
+    <ClCompile Include="Ref_Image.cpp" />
     <ClCompile Include="WheresWally.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Base_Image.h" />
+    <ClInclude Include="Large_Image.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Ref_Image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Cluttered_scene.txt" />
+    <Text Include="Wally_grey.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
