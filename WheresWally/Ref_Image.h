@@ -1,21 +1,22 @@
 /*###############################
-Creation Date: 2018-11-20
+Creation Date: 2018-11-30
+	Added Ref Image Header. Inherits Base_image.
 
 ###############################*/
 
 #pragma once
 #include "Base_Image.h"
+#include "Struct.h"
 
 class Ref_Image : public Base_Image
 {
 private:
-	vector<int[2]> Locations;
+	vector<CoOrd> Locations;
 public:
 	Ref_Image();
 	~Ref_Image();
-	vector<int[2]>* GetLocations();
-	int* GetLoc(int);
-
-
+	vector<CoOrd>* GetLocations();
+	CoOrd* GetLoc(int);
+	void AddLocation(int, int);
 };
 

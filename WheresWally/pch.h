@@ -11,3 +11,4 @@ Edit: 2018-11-21:
 #include "Base_Image.h"
 #include "Large_Image.h"
 #include "Ref_Image.h"
+#include "Struct.h"

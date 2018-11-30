@@ -1,6 +1,6 @@
 /*###############################
-Creation Date: 2018-11-20
-
+Creation Date: 2018-11-30
+	Added Ref Image Class to project. Inherits Base Image.
 ###############################*/
 
 #include "pch.h"
@@ -14,10 +14,19 @@ Ref_Image::~Ref_Image()
 {
 }
 
-vector<int[2]>* Ref_Image::GetLocations() {
+vector<CoOrd>* Ref_Image::GetLocations()
+{
 	return &Locations;
 }
 
-int* Ref_Image::GetLoc(int Coordinate) {
-	return Locations[Coordinate];
+CoOrd * Ref_Image::GetLoc(int LocNum)
+{
+	return &Locations[LocNum];
 }
+
+void Ref_Image::AddLocation(int x, int y)
+{
+	CoOrd NewLoc{ x, y };
+	Locations.push_back(NewLoc);
+}
+
