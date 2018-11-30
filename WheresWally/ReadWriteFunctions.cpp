@@ -47,8 +47,7 @@ void write_pgm(char *filename, double *data, int sizeR, int sizeC, int Q)
 
  // convert the integer values to unsigned char
  
- for(i=0; i<sizeR*sizeC; i++)
-	 image[i]=(unsigned char)data[i];
+ for(i=0; i<sizeR*sizeC; i++) image[i]=(unsigned char)data[i];
 
  myfile.open(filename, std::ios::out|std::ios::binary|std::ios::trunc);
 
