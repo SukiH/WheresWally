@@ -12,7 +12,7 @@ Large_Image::Large_Image(){
 Large_Image::~Large_Image(){
 }
 
-void Large_Image::Output(char *filename, int Q)
+void Large_Image::Output(const char *filename, int Q)
 {
 	//based highly upon Presupplied Function, provided for assignment.
 // Converts a 1D array of doubles of size R*C to .pgm image of R rows and C Columns 
@@ -31,10 +31,16 @@ void Large_Image::Output(char *filename, int Q)
 
 	// convert the integer values to unsigned char
 
-	for (i = 0; i < sizeR*sizeC; i++)
-		image[i] = (unsigned char)data[i];
+	for (int cn = 0; cn < RowCount(); cn++) {
+		for (std::vector<float>::iterator it = GetRow(i)->begin(); it != GetRow(i)->end(); ++it) {
+			image[i] = (unsigned char)*it;
+		}
+	}
 
-	myfile.open(filename, std::ios::out | std::ios::binary | std::ios::trunc);
+	for (i = 0; i < sizeR*sizeC; i++)
+
+
+		myfile.open(filename, std::ios::out | std::ios::binary | std::ios::trunc);
 
 	if (!myfile) {
 		std::cout << "Can't open file: " << filename << std::endl;

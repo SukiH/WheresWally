@@ -21,5 +21,6 @@ public:
 	vector<float>* GetRow(int);
 	int RowCount();
 	float GetValue(int, int);
+	void ChangeColour(int x, int y, float col);
 };
 

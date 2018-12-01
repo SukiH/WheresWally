@@ -42,3 +42,8 @@ int Matrix::RowCount() {
 float Matrix::GetValue(int x, int y) {
 	return Data[y][x];
 }
+
+void Matrix::ChangeColour(int x, int y, float col)
+{
+	Data[y][x] = col;
+}
