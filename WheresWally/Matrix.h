@@ -20,7 +20,7 @@ public:
 	vector<vector<float>>* GetDataPointer(); //Gets a pointer to the full set of data in the Matrix. Uses pointer to save on memory
 	vector<float>* GetRow(int);
 	int RowCount();
-	float GetValue(int, int);
+	float GetValue(int x, int y);
 	void ChangeColour(int x, int y, float col);
 };
 

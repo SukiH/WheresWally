@@ -1,4 +1,6 @@
 /*###############################
+Modified Date: 2018-12-03
+	Changed AddLocation Method to reflect the CoOrd Struct
 Creation Date: 2018-11-30
 	Added Ref Image Class to project. Inherits Base Image.
 ###############################*/
@@ -24,9 +26,9 @@ CoOrd * Ref_Image::GetLoc(int LocNum)
 	return &Locations[LocNum];
 }
 
-void Ref_Image::AddLocation(int x, int y)
+void Ref_Image::AddLocation(int x, int y, int dist)
 {
-	CoOrd NewLoc{ x, y };
+	CoOrd NewLoc{ x, y, dist };
 	Locations.push_back(NewLoc);
 }
 

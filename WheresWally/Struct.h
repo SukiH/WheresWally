@@ -3,4 +3,5 @@
 struct CoOrd {
 	int x;
 	int y;
+	int dist;
 };

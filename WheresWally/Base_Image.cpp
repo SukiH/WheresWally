@@ -31,7 +31,7 @@ void Base_Image::LoadImage(string FilePath) {
 		string Pixel;
 
 		
-		cout << "Loading";
+		cout << "Loading...";
 		while (!ImageText.eof()) {//loop until we have full set of data.
 			while (getline(ImageText, Line, '\n')) { //Read a line into the system
 
@@ -53,7 +53,7 @@ void Base_Image::LoadImage(string FilePath) {
 				break; //Line has been read, break loop
 			}
 
-			cout << ".";
+			//cout << ".";
 		}
 		cout << endl;
 		

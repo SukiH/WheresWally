@@ -1,4 +1,6 @@
 /*###############################
+Modified Date: 2018-12-02
+	Added method allowing the program to change a value of the data. This will be useful when drawing circles around the found location.
 Modified Date: 2018-11-29
 	Added GetDataPointer function to return the memory address of the matrix, in case that is required, to save on memory
 	Added RowCount Function to tell us how many rows are in teh matrix
@@ -22,28 +24,30 @@ Matrix::~Matrix()
 {
 }
 
-void Matrix::AddRow(vector<float> Row) { //Adds a presupplied vector of floats to the data of the matrix
+void Matrix::AddRow(vector<float> Row) { //Adds a vector of floats to the data of the matrix bsaed on the value passed to the parameter
 	Data.push_back(Row);
 }
 
-vector<float>* Matrix::GetRow(int rowNumber) {
+vector<float>* Matrix::GetRow(int rowNumber) { //returns the nested vector (The Row)
 	return &Data[rowNumber];
 
 }
 
-vector<vector<float>>* Matrix::GetDataPointer() {
+//The following function returns a pointer to our data in the matrix, as vectors can commonly change their memory addresses with operations are performed
+//Having this function allows us to refresh the pointer and help reduce errors.
+vector<vector<float>>* Matrix::GetDataPointer() { 
 	return &Data;
 }
 
-int Matrix::RowCount() {
+int Matrix::RowCount() { //simple function to get the amount of rows held in this vector
 	return Data.size();
 }
 
-float Matrix::GetValue(int x, int y) {
+float Matrix::GetValue(int x, int y) { //gets the value held at point x and y
 	return Data[y][x];
 }
 
-void Matrix::ChangeColour(int x, int y, float col)
+void Matrix::ChangeColour(int x, int y, float col) //Allows access to change data at point x and y
 {
 	Data[y][x] = col;
 }

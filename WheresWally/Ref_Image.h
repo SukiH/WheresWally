@@ -1,7 +1,8 @@
 /*###############################
+Modified Date: 2018-12-03
+	Changed AddLocation Method to reflect the CoOrd Struct
 Creation Date: 2018-11-30
 	Added Ref Image Header. Inherits Base_image.
-
 ###############################*/
 
 #pragma once
@@ -17,6 +18,6 @@ public:
 	~Ref_Image();
 	vector<CoOrd>* GetLocations();
 	CoOrd* GetLoc(int);
-	void AddLocation(int, int);
+	void AddLocation(int, int, int);
 };
 

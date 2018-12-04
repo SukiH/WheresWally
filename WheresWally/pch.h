@@ -12,3 +12,6 @@ Edit: 2018-11-21:
 #include "Large_Image.h"
 #include "Ref_Image.h"
 #include "Struct.h"
+
+void DrawSquare(Large_Image* Image, Ref_Image* Ref, int startX, int startY);
+void LinearNNS(Ref_Image* Search, Large_Image* Background);
