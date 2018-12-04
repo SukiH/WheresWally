@@ -34,7 +34,7 @@ void Large_Image::Output(string filename, int Q)
 	// convert the integer values to unsigned char
 
 	int ctr = 0;
-	for (int cn = 0; cn < RowCount(); cn++) {
+	for (int cn = 0; cn < sizeR; cn++) {
 		for (std::vector<float>::iterator it = GetRow(cn)->begin(); it != GetRow(cn)->end(); ++it) {
 			image[ctr] = (unsigned char)*it;
 			ctr++;
