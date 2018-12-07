@@ -26,7 +26,7 @@ CoOrd * Ref_Image::GetLoc(int LocNum)
 	return &Locations[LocNum];
 }
 
-void Ref_Image::AddLocation(int x, int y, int dist)
+void Ref_Image::AddLocation(int x, int y, double dist)
 {
 	CoOrd NewLoc{ x, y, dist };
 	Locations.push_back(NewLoc);

@@ -61,4 +61,20 @@ void Base_Image::LoadImage(string FilePath) {
 	}
 }
 
+vector<float> Base_Image::Flatify() {
+	vector<float> Flattened;
+
+	int Rows = RowCount();
+	int Cols = GetRow(0)->size();
+
+
+	for (int r = 0; r < Rows; r++) {
+		for (int c = 0; c < Cols; c++) {
+			Flattened.push_back(GetValue(c, r));
+		}
+	}
+
+	return Flattened;
+}
+
 

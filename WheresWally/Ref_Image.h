@@ -18,6 +18,6 @@ public:
 	~Ref_Image();
 	vector<CoOrd>* GetLocations();
 	CoOrd* GetLoc(int);
-	void AddLocation(int, int, int);
+	void AddLocation(int x, int y, double dist);
 };
 

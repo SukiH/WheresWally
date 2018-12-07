@@ -15,10 +15,14 @@ Creation Date: 2018-11-29
 using namespace std;
 class Base_Image : public Matrix
 {
+
 private:
 public:
 	Base_Image();
 	~Base_Image();
 	void LoadImage(string);
+
+	//Takes the data of the image and returns a 1d vector of all the data in the iamge
+	vector<float> Flatify();
 };
 

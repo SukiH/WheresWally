@@ -65,3 +65,21 @@ void Large_Image::Output(string filename, int Q)
 
 	delete[] image;
 }
+
+vector<float> Large_Image::Flatify(int startX, int startY, int sizeX, int sizeY)
+{
+	vector<float> Flattened;
+
+	int Rows = RowCount();
+	int Cols = GetRow(0)->size();
+
+	if (!(startY + sizeY >= Rows) || !(startX + sizeX >= Cols)) {
+		for (int r = startY; r < (startY + sizeY); r++) {
+			for (int c = startX; c < (startX + sizeX); c++) {
+				Flattened.push_back(GetValue(c, r));
+			}
+		}
+	}
+
+	return Flattened;
+}
