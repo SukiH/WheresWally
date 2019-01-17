@@ -30,7 +30,7 @@ void Base_Image::LoadImage(string FilePath) {
 		string Line; // To hold a line of data, so that we can then do a nested operation and get data from inside that line
 		string Pixel;
 
-		
+		cout << "Reading Filepath: " << FilePath << " ";
 		cout << "Loading...";
 		while (!ImageText.eof()) {//loop until we have full set of data.
 			while (getline(ImageText, Line, '\n')) { //Read a line into the system

@@ -1,4 +1,6 @@
 /*###############################
+Modified Date: 2018-12-20
+	Added function overload for () to allow for easier retrieval of specified data value
 Modified Date: 2018-12-02
 	Added method allowing the program to change a value of the data. This will be useful when drawing circles around the found location.
 Modified Date: 2018-11-29
@@ -44,6 +46,11 @@ int Matrix::RowCount() { //simple function to get the amount of rows held in thi
 }
 
 float Matrix::GetValue(int x, int y) { //gets the value held at point x and y
+	return Data[y][x];
+}
+
+float Matrix::operator()(int x, int y)
+{
 	return Data[y][x];
 }
 

@@ -17,7 +17,8 @@ public:
 	Ref_Image();
 	~Ref_Image();
 	vector<CoOrd>* GetLocations();
-	CoOrd* GetLoc(int);
+	CoOrd* GetLoc(int locationNum);
 	void AddLocation(int x, int y, double dist);
+	void SortLocations();
 };
 

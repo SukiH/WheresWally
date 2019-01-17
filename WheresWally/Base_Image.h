@@ -21,7 +21,7 @@ public:
 	Base_Image();
 	~Base_Image();
 	void LoadImage(string);
-
+	void operator +(vector<float>&);
 	//Takes the data of the image and returns a 1d vector of all the data in the iamge
 	vector<float> Flatify();
 };

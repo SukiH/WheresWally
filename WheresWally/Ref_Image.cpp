@@ -1,4 +1,6 @@
 /*###############################
+Modified Data: 2018-12-19
+	Added Mathod to Sort data
 Modified Date: 2018-12-03
 	Changed AddLocation Method to reflect the CoOrd Struct
 Creation Date: 2018-11-30
@@ -30,5 +32,11 @@ void Ref_Image::AddLocation(int x, int y, double dist)
 {
 	CoOrd NewLoc{ x, y, dist };
 	Locations.push_back(NewLoc);
+}
+
+//Sort Locations held in Ref_Image using a Merge Sort. Data will be sorted into ascending order
+void Ref_Image::SortLocations()
+{
+	MergeSort(&Locations);
 }
 

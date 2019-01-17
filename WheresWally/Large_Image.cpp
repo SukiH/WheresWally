@@ -22,7 +22,7 @@ void Large_Image::Output(string filename, int Q)
 // Use Q = 255 for greyscale images and 1 for binary images.
 
 
-	int i, j;
+	//int i, j;
 	unsigned char *image;
 	vector<vector<float>>* Data = GetDataPointer();
 	std::ofstream myfile;
